@@ -1,0 +1,5 @@
+{
+  "name": "LIC Circuit Calculator and Visualizer",
+  "description": "An interactive educational tool for calculating and visualizing Linear Integrated Circuit (LIC) op-amp circuits like Inverting, Non-Inverting, and Integrator amplifiers.",
+  "requestFramePermissions": []
+}

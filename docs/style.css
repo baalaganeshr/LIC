@@ -1,0 +1,612 @@
+/* 
+   LIC Circuit Calculator and Visualizer - CSS Styles
+   Modern, clean, and professional design for a college assignment.
+*/
+
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #60a5fa;
+    --secondary-color: #475569;
+    --secondary-hover: #64748b;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --error-color: #ef4444;
+    --border-color: #334155;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --radius: 16px;
+    --input-bg: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.intro {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.selection-section {
+    margin-bottom: 30px;
+}
+
+.selection-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.input-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 35px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-group input {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.input-with-unit {
+    display: flex;
+    gap: 10px;
+}
+
+.input-with-unit input {
+    flex: 1;
+}
+
+.unit-select {
+    width: 90px;
+    padding: 12px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.unit-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+    transform: translateY(-1px);
+}
+
+.error-message {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #fca5a5;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+hr {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.output-section h2 {
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.result-item {
+    margin-bottom: 20px;
+}
+
+.result-item code {
+    display: block;
+    background: rgba(15, 23, 42, 0.5);
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #93c5fd;
+    border: 1px solid var(--border-color);
+}
+
+.highlight {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #60a5fa;
+    display: block;
+    margin-top: 8px;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.explanation {
+    margin-top: 25px;
+}
+
+.explanation p {
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.circuit-diagram {
+    text-align: center;
+}
+
+.circuit-diagram img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-top: 15px;
+    background-color: white;
+    padding: 20px;
+}
+
+.applications {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: rgba(15, 23, 42, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.applications h3 {
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.applications ul {
+    margin-top: 12px;
+    margin-left: 24px;
+    color: var(--text-muted);
+}
+
+.applications li {
+    margin-bottom: 8px;
+}
+
+.note-section {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 30px;
+}
+
+.circuit-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circuit-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.circuit-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+}
+
+.circuit-card h3 {
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.card-diagram {
+    width: 100%;
+    background: rgba(15, 23, 42, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuit-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 25px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--primary-hover);
+}
+
+.circuit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.circuit-header h2 {
+    color: var(--text-main);
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.main-diagram {
+    width: 100%;
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.skeleton-svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+}
+
+.skeleton-svg path, 
+.skeleton-svg line, 
+.skeleton-svg circle {
+    stroke: var(--primary-color);
+    transition: stroke 0.3s ease;
+}
+
+.skeleton-svg text {
+    fill: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    transition: fill 0.3s ease;
+    paint-order: stroke;
+    stroke: var(--card-bg);
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.main-diagram {
+    width: 100%;
+    background: rgba(15, 23, 42, 0.3);
+    padding: 40px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.main-diagram p {
+    margin-top: 25px;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Tooltip Styles */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    border-bottom: 2px dashed var(--primary-color);
+    padding-bottom: 2px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 320px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    text-align: left;
+    border-radius: 12px;
+    padding: 16px;
+    position: absolute;
+    z-index: 100;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    border: 1px solid var(--border-color);
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--border-color) transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    bottom: 125%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+
+    header h1 {
+        font-size: 2.25rem;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+
+    .circuit-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        text-align: left;
+    }
+
+    .circuit-header h2 {
+        font-size: 1.75rem;
+        width: 100%;
+    }
+
+    .main-diagram {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .skeleton-svg {
+        max-height: 350px;
+    }
+
+    .tooltip-text {
+        width: 260px;
+    }
+    
+    .highlight {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    .input-with-unit {
+        flex-direction: column;
+    }
+
+    .unit-select {
+        width: 100%;
+    }
+    
+    .skeleton-svg text {
+        font-size: 14px;
+    }
+    
+    #svg-vin-label, #svg-vout-label {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC Circuit Calculator and Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LIC Circuit Calculator & Visualizer</h1>
+            <p class="intro">
+                Linear Integrated Circuits (LIC) are a category of integrated circuits that operate on analog signals. 
+                The Operational Amplifier (Op-Amp) is the most versatile building block in LIC.
+            </p>
+        </header>
+
+        <main class="home-grid">
+            <a href="inverting.html" class="circuit-card">
+                <div class="card-diagram">
+                    <svg viewBox="0 0 600 350" class="skeleton-svg">
+                        <!-- Power Supply Pins -->
+                        <line x1="350" y1="125" x2="350" y2="80" stroke-width="2"/>
+                        <line x1="350" y1="175" x2="350" y2="220" stroke-width="2"/>
+                        <!-- Op-Amp Triangle -->
+                        <path d="M 300 100 L 300 200 L 400 150 Z" fill="none" stroke-width="3"/>
+                        <text x="310" y="135" font-size="20">-</text>
+                        <text x="310" y="180" font-size="20">+</text>
+                        <line x1="300" y1="125" x2="220" y2="125" stroke-width="2"/>
+                        <path d="M 220 125 L 210 115 L 200 135 L 190 115 L 180 135 L 170 115 L 160 125" fill="none" stroke-width="2"/>
+                        <line x1="400" y1="150" x2="480" y2="150" stroke-width="3"/>
+                        <circle cx="485" cy="150" r="5"/>
+                    </svg>
+                </div>
+                <h3>Inverting Amplifier</h3>
+                <p>Produces amplified output with phase inversion.</p>
+                <span class="btn btn-primary">Explore Circuit</span>
+            </a>
+
+            <a href="non-inverting.html" class="circuit-card">
+                <div class="card-diagram">
+                    <svg viewBox="0 0 600 350" class="skeleton-svg">
+                        <!-- Power Supply Pins -->
+                        <line x1="350" y1="125" x2="350" y2="80" stroke-width="2"/>
+                        <line x1="350" y1="175" x2="350" y2="220" stroke-width="2"/>
+                        <!-- Op-Amp Triangle -->
+                        <path d="M 300 100 L 300 200 L 400 150 Z" fill="none" stroke-width="3"/>
+                        <text x="310" y="135" font-size="20">-</text>
+                        <text x="310" y="180" font-size="20">+</text>
+                        <line x1="300" y1="175" x2="200" y2="175" stroke-width="2"/>
+                        <line x1="400" y1="150" x2="480" y2="150" stroke-width="3"/>
+                        <circle cx="485" cy="150" r="5"/>
+                    </svg>
+                </div>
+                <h3>Non-Inverting Amplifier</h3>
+                <p>Produces amplified output without phase inversion.</p>
+                <span class="btn btn-primary">Explore Circuit</span>
+            </a>
+
+            <a href="integrator.html" class="circuit-card">
+                <div class="card-diagram">
+                    <svg viewBox="0 0 600 350" class="skeleton-svg">
+                        <!-- Power Supply Pins -->
+                        <line x1="350" y1="125" x2="350" y2="80" stroke-width="2"/>
+                        <line x1="350" y1="175" x2="350" y2="220" stroke-width="2"/>
+                        <!-- Op-Amp Triangle -->
+                        <path d="M 300 100 L 300 200 L 400 150 Z" fill="none" stroke-width="3"/>
+                        <text x="310" y="135" font-size="20">-</text>
+                        <text x="310" y="180" font-size="20">+</text>
+                        <!-- Feedback path with capacitor -->
+                        <line x1="300" y1="125" x2="220" y2="125" stroke-width="2"/>
+                        <line x1="220" y1="125" x2="220" y2="50" stroke-width="2"/>
+                        <line x1="220" y1="50" x2="280" y2="50" stroke-width="2"/>
+                        <line x1="280" y1="35" x2="280" y2="65" stroke-width="2"/>
+                        <line x1="290" y1="35" x2="290" y2="65" stroke-width="2"/>
+                        <line x1="290" y1="50" x2="440" y2="50" stroke-width="2"/>
+                        <line x1="440" y1="50" x2="440" y2="150" stroke-width="2"/>
+                        <line x1="400" y1="150" x2="480" y2="150" stroke-width="3"/>
+                    </svg>
+                </div>
+                <h3>Integrator</h3>
+                <p>Produces output proportional to the time integral of the input.</p>
+                <span class="btn btn-primary">Explore Circuit</span>
+            </a>
+        </main>
+
+        <section class="note-section">
+            <p><strong>Note:</strong> This project is an educational tool for learning fundamental Op-Amp configurations.</p>
+        </section>
+
+        <footer>
+            <p>Developed as a Linear Integrated Circuits mini project.</p>
+        </footer>
+    </div>
+</body>
+</html>

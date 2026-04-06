@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrator - LIC Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-circuit="integrator">
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <header class="circuit-header">
+            <h2 id="circuit-title"></h2>
+            <p id="circuit-formula-container" class="hidden">Formula: <code id="circuit-formula"></code></p>
+        </header>
+
+        <div class="main-diagram">
+            <svg viewBox="0 0 600 350" class="skeleton-svg">
+                <!-- Power Supply Pins -->
+                <line x1="350" y1="125" x2="350" y2="80" stroke-width="2"/>
+                <text x="340" y="75" font-size="12">+Vcc</text>
+                <line x1="350" y1="175" x2="350" y2="220" stroke-width="2"/>
+                <text x="340" y="235" font-size="12">-Vee</text>
+
+                <!-- Op-Amp Triangle -->
+                <path d="M 300 100 L 300 200 L 400 150 Z" fill="none" stroke-width="3"/>
+                <text x="310" y="135" font-size="20">-</text>
+                <text x="310" y="180" font-size="20">+</text>
+                
+                <!-- Output Line -->
+                <line x1="400" y1="150" x2="480" y2="150" stroke-width="3"/>
+                <circle cx="485" cy="150" r="5"/>
+                <text x="500" y="140" font-size="16" font-weight="bold" id="svg-vout-label">Vout = --V</text>
+
+                <!-- Non-Inverting Input to Ground -->
+                <line x1="300" y1="175" x2="250" y2="175" stroke-width="2"/>
+                <line x1="250" y1="175" x2="250" y2="260" stroke-width="2"/>
+                <!-- Ground Symbol -->
+                <line x1="230" y1="260" x2="270" y2="260" stroke-width="2"/>
+                <line x1="240" y1="265" x2="260" y2="265" stroke-width="2"/>
+                <line x1="245" y1="270" x2="255" y2="270" stroke-width="2"/>
+
+                <!-- Inverting Input Path -->
+                <line x1="300" y1="125" x2="220" y2="125" stroke-width="2"/>
+                
+                <!-- R Resistor -->
+                <path d="M 220 125 L 210 115 L 200 135 L 190 115 L 180 135 L 170 115 L 160 125" fill="none" stroke-width="2"/>
+                <text x="180" y="110" font-size="14" font-weight="bold" id="svg-r-label">R = --</text>
+                <line x1="160" y1="125" x2="100" y2="125" stroke-width="2"/>
+                <circle cx="95" cy="125" r="5"/>
+                <text x="40" y="120" font-size="16" font-weight="bold" id="svg-vin-label">Vin = --V</text>
+
+                <!-- C Feedback Path -->
+                <line x1="220" y1="125" x2="220" y2="50" stroke-width="2"/>
+                <line x1="220" y1="50" x2="280" y2="50" stroke-width="2"/>
+                <!-- Capacitor Symbol -->
+                <line x1="280" y1="35" x2="280" y2="65" stroke-width="2"/>
+                <line x1="290" y1="35" x2="290" y2="65" stroke-width="2"/>
+                <text x="300" y="25" font-size="14" font-weight="bold" id="svg-c-label">C = --</text>
+                <line x1="290" y1="50" x2="440" y2="50" stroke-width="2"/>
+                <line x1="440" y1="50" x2="440" y2="150" stroke-width="2"/>
+                <!-- Time label -->
+                <text x="480" y="280" font-size="14" font-weight="bold" id="svg-t-label">t = --s</text>
+            </svg>
+            <p>Skeleton Circuit Diagram: Integrator</p>
+        </div>
+
+        <main class="card">
+            <section id="input-container" class="input-section">
+                <!-- Inputs will be injected here -->
+            </section>
+
+            <div class="button-group">
+                <button id="calculate-btn" class="btn btn-primary">Calculate Output</button>
+                <button id="reset-btn" class="btn btn-secondary">Reset Fields</button>
+            </div>
+
+            <div id="error-message" class="error-message hidden"></div>
+
+            <section id="output-section" class="output-section hidden">
+                <hr>
+                <div class="result-item">
+                    <strong>Calculated Output (V<sub>out</sub>):</strong>
+                    <span id="result-display" class="highlight"></span>
+                </div>
+                <div class="explanation">
+                    <strong>How it works:</strong>
+                    <p id="explanation-text"></p>
+                </div>
+                <div class="applications">
+                    <strong>Common Applications:</strong>
+                    <ul id="applications-list"></ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Developed as a Linear Integrated Circuits mini project.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
