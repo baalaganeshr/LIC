@@ -180,6 +180,8 @@ select:focus {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    min-height: 44px;
+    touch-action: manipulation;
 }
 
 .btn-primary {
@@ -418,6 +420,11 @@ footer {
     margin-bottom: 0;
 }
 
+.circuit-header code {
+    white-space: normal;
+    word-break: break-word;
+}
+
 .main-diagram {
     width: 100%;
     background: white;
@@ -528,6 +535,36 @@ footer {
     bottom: 125%;
 }
 
+/* Touch devices don't have hover; show the formula detail in-flow instead of a hover-only tooltip. */
+@media (hover: none) {
+    .tooltip-container {
+        cursor: default;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        transform: none;
+        width: auto;
+        max-width: 100%;
+        margin-top: 10px;
+        pointer-events: auto;
+    }
+
+    .tooltip-text::after {
+        display: none;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .circuit-card:hover {
+        transform: none;
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     body {
@@ -544,6 +581,13 @@ footer {
 
     .card {
         padding: 24px;
+    }
+
+    /* Prevent mobile browsers (notably iOS Safari) from zooming on focus */
+    .input-group input,
+    select,
+    .unit-select {
+        font-size: 16px;
     }
 
     .result-grid {
@@ -590,6 +634,26 @@ footer {
         font-size: 1.8rem;
     }
 
+    header {
+        margin-bottom: 32px;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .home-grid {
+        gap: 20px;
+    }
+
+    .circuit-card {
+        padding: 18px;
+    }
+
+    .card-diagram {
+        padding: 14px;
+    }
+
     .btn {
         padding: 12px 20px;
     }
@@ -604,9 +668,15 @@ footer {
     
     .skeleton-svg text {
         font-size: 14px;
+        stroke-width: 2px;
     }
     
     #svg-vin-label, #svg-vout-label {
         font-size: 14px;
+    }
+
+    .main-diagram p {
+        margin-top: 16px;
+        font-size: 0.95rem;
     }
 }
